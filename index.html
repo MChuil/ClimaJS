@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Pro OpenWeather</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true">⛅</div>
+                <div>
+                    <h1>Clima Pro</h1>
+                    <p>OpenWeather • actual + 5 días</p>
+                </div>
+            </div>
+
+            <div class="unit-toggle" role="group" aria-label="Unidades">
+                <button id="btnMetric" class="chip is-active" type="button">°C</button>
+                <button id="btnImperial" class="chip" type="button">°F</button>
+            </div>
+        </header>
+
+        <section class="panel">
+            <form id="searchForm" class="search" autocomplete="off">
+                <div class="searchbox">
+                    <span class="search-ico" aria-hidden="true">🔎</span>
+                    <input id="cityInput" type="text" placeholder="Busca una ciudad… ej: Tuxtla Gutiérrez, MX"
+                        aria-label="Buscar ciudad" required />
+                    <button class="btn" type="submit">Buscar</button>
+                </div>
+
+                <div class="row">
+                    <button id="btnMyLocation" class="btn ghost" type="button">
+                        Usar mi ubicación
+                    </button>
+
+                    <div class="recent">
+                        <label class="muted" for="recentSelect">Recientes:</label>
+                        <select id="recentSelect" class="select">
+                            <option value="">—</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+            <div id="status" class="status" aria-live="polite"></div>
+
+            <section id="result" class="result hidden">
+                <article class="card current">
+                    <div class="current-head">
+                        <div>
+                            <h2 id="place">—</h2>
+                            <p class="muted" id="meta">—</p>
+                        </div>
+
+                        <div class="wx">
+                            <img id="icon" alt="" />
+                            <div class="wx-text">
+                                <div id="desc" class="desc">—</div>
+                                <div id="feels" class="muted">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="big">
+                        <div class="temp">
+                            <span id="temp">—</span><span id="unit">°C</span>
+                        </div>
+                        <div class="badges">
+                            <div class="badge">
+                                <span class="k">Humedad</span>
+                                <span class="v" id="humidity">—</span>
+                            </div>
+                            <div class="badge">
+                                <span class="k">Viento</span>
+                                <span class="v" id="wind">—</span>
+                            </div>
+                            <div class="badge">
+                                <span class="k">Presión</span>
+                                <span class="v" id="pressure">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid2">
+                        <div class="mini">
+                            <span class="k">Máx</span>
+                            <span class="v" id="tmax">—</span>
+                        </div>
+                        <div class="mini">
+                            <span class="k">Mín</span>
+                            <span class="v" id="tmin">—</span>
+                        </div>
+                        <div class="mini">
+                            <span class="k">Salida del sol</span>
+                            <span class="v" id="sunrise">—</span>
+                        </div>
+                        <div class="mini">
+                            <span class="k">Puesta del sol</span>
+                            <span class="v" id="sunset">—</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card forecast">
+                    <div class="card-title">
+                        <h3>Pronóstico 5 días</h3>
+                        <p class="muted">Tomando el valor cercano al mediodía</p>
+                    </div>
+
+                    <div id="forecastGrid" class="forecast-grid"></div>
+                </article>
+            </section>
+        </section>
+
+        <footer class="footer">
+            <span class="muted">
+                Consejo: si pones “, MX” reduces ciudades “clonadas” 😄
+            </span>
+        </footer>
+    </main>
+
+
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

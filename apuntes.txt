@@ -1,0 +1,13 @@
+Una API REST (Representational State Transfer - Transferencia de Estado Representacional) es un estilo arquitectónico para diseñar APIs web que permite la comunicación entre sistemas usando protocolos estándar como HTTP, facilitando el intercambio de datos entre aplicaciones de forma sencilla, escalable y sin estado, utilizando recursos (como datos) y métodos HTTP (GET, POST, PUT, DELETE) para operaciones como leer, crear, modificar y eliminar información.
+
+
+Métodos HTTP: Se usan para interactuar con los recursos:
+- GET: Para obtener datos (leer).
+- POST: Para crear un nuevo recurso.
+- PUT: Para actualizar o reemplazar un recurso existente.
+- DELETE: Para eliminar un recurso.
+
+
+API OpenWeather (https://openweathermap.org/)
+- Abrir cuenta en openweathermap
+- Obtener la API key
